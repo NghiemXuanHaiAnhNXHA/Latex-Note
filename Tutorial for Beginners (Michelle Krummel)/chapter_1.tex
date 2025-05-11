@@ -1,0 +1,262 @@
+\documentclass[12pt]{article}
+\title{LaTeX - Tutorial for Beginners}
+\usepackage[utf8]{inputenc}
+%Package for math
+\usepackage{amsmath, amssymb, amsfonts}
+%Package for align picture and table
+\usepackage{float}
+%Package to setting the margin
+\usepackage[top=1in, bottom=1in, left=0.75in, right=0.75in]{geometry}
+%Package to insert picture
+\usepackage{graphicx}
+\date{}
+
+\begin{document}
+	\tableofcontents
+	\maketitle
+	\section{Common Mathematical Notation}
+	
+	\leavevmode
+	
+	supperscripts $$2x^3$$
+	$$2x^12$$
+	$$2x^{12}$$
+	
+	subscripts
+	$$x_{12}$$
+	$$x_{1_2}$$
+	$$a_0, a_1, \ldots, a_{100}$$
+	
+	Greek letters
+	$$\pi$$
+	$$\Pi$$
+	$$\alpha$$
+	$$A = \pi r^2$$
+	
+	Trig functions
+	$$y = \sin x$$
+	$$y = \cos x$$
+	$$y = \sin^{-1} \theta$$
+	
+	Log functions
+	$$y = \log x$$
+	$$y = \log_5 x$$
+	$$y = \ln x$$
+	
+	Roots
+	$$y = \sqrt{x}$$
+	$$y = \sqrt[3]{2}$$
+	$$f(x) = \sqrt{x^2 + y^2}$$
+	$$\sqrt{1+\sqrt{x}}$$
+	
+	Fractions
+	$$\frac{2}{4}$$\\
+	
+	Normal $\frac{2}{4}$\\[16pt]
+	
+	Display $\displaystyle \frac{2}{4}$
+	
+	\section{Brackets, Tables and Arrays}
+	\subsection{Brackets}
+	
+	\leavevmode
+	
+	The distributive property states that $a(b+c) = ab + ac$ for all $a, b, c \in \mathbb{R}$.\\
+	
+	The equivalence class of $a$ is $[a]$.\\
+	
+	The set $A$ is defined to be $\{1, 2, 3\}$.
+	
+	$$\left(\frac{1}{x^2 - 1}\right)$$
+	
+	$$2\left \langle \frac{x}{y} \right \rangle$$
+	
+	$$2\left|\frac{1}{x^2 - 1} \right|$$
+	
+	$$ \left. \frac{dy}{dx} \right|_{x - 1}$$
+	\subsection{Table}
+	
+	\leavevmode
+	
+	\begin{tabular}{|c||c|c|c|c|c|}
+		\hline
+		$x$ & 1 & 2 & 3 & 4 & 5 \\ \hline
+		$f(x)$ & 6 & 7 & 8 & 9 & $\frac{4}{7}$ \\ \hline
+	\end{tabular}
+	\vspace{1cm}
+	
+	\begin{table}[H]
+		\centering
+		\def\arraystretch{1.5}
+		\begin{tabular}{|c||c|c|c|c|c|}
+			\hline
+			$x$ & 1 & 2 & 3 & 4 & 5\\ \hline
+			$f(x)$ & $\frac{1}{2}$ & 7 & 8 & 9 & $\frac{4}{7}$\\ \hline
+		\end{tabular}
+	\caption{These values represent the function $f(x)$.}
+	\end{table}
+	
+	\begin{table}[H]
+		\centering
+		\def\arraystretch{1.5}
+		\begin{tabular}{|c|c|}
+			\hline
+			$f(x)$ & $f'(x)$ \\ \hline
+			$x>0$ & The function $f(x)$ is increasing.\\ \hline
+		\end{tabular}
+		\caption{The relationship between $f(x)$ and $f'(x)$.}
+	\end{table}
+	
+	\begin{table}[H]
+		\centering
+		\def\arraystretch{1.5}
+		\begin{tabular}{|l|p{3in}|}
+			\hline
+			$f(x)$ & $f'(x)$ \\ \hline
+			$x>0$ & The function $f(x)$ is increasing. The function $f(x)$ is increasing. The function $f(x)$ is increasing.\\ \hline
+		\end{tabular}
+		\caption{The relationship between $f(x)$ and $f'(x)$.}
+	\end{table}
+	
+	\subsection{Equation Arrays}
+	
+	\leavevmode
+	
+	\begin{align}
+		5x^2 \text{text}\\
+		5x^2-9=x+3\\
+		\sqrt{x + \sqrt{x}} + 1 = \sqrt{3}
+	\end{align}
+	
+	\begin{align*}
+		5x^2 \text{text}\\
+		5x^2-9&=x+3\\
+		\sqrt{x + \sqrt{x}} + 1 &= \sqrt{3}
+	\end{align*}
+	
+	\section{Creating Lists}
+	
+	\leavevmode
+	
+	\begin{enumerate}
+		\item pencil
+		\item calculator
+		\item ruler
+		\item notebook
+			\begin{enumerate}
+				\item notes
+				\item homework
+				\item assessments
+					\begin{enumerate}
+						\item tests
+						\item quizzes
+						\item journal entries
+					\end{enumerate}
+			\end{enumerate}
+		\item highlighters
+	\end{enumerate}
+	
+	\pagebreak
+	
+	\begin{itemize}
+		\item pencil
+		\item calculator
+		\item ruler
+		\item notebook
+	\end{itemize}
+	
+	\section{Text Document Formatting}
+	
+	\leavevmode
+	
+	This will produce \textit{italicized} text.\\
+	
+	This will produce \textbf{bold face} text.\\
+	
+	This will produce \texttt{typewriter font} text.\\
+	
+	Please visit Michelle Krummel's website at: \texttt{http://michellekrummel.com}.
+	
+	\vspace{1cm}
+	
+	Please excuse my dear aunt Sally.\\
+	
+	Please excuse my \begin{large}
+		dear aunt Sally.
+	\end{large}\\
+	
+	Please excuse my \begin{Large}
+		dear aunt Sally.
+	\end{Large}\\
+	
+	Please excuse my \begin{huge}
+		dear aunt Sally.
+	\end{huge}\\
+	
+	Please excuse my \begin{Huge}
+		dear aunt Sally.
+	\end{Huge}\\
+	
+	Please excuse my \begin{normalsize}
+		dear aunt Sally.
+	\end{normalsize}\\
+	
+	Please excuse my \begin{small}
+		dear aunt Sally.
+	\end{small}\\
+	
+	Please excuse my \begin{scriptsize}
+		dear aunt Sally.
+	\end{scriptsize}\\
+	
+	Please excuse my \begin{tiny}
+		dear aunt Sally.
+	\end{tiny}
+	
+	\vspace{1cm}
+	
+	\begin{center}
+		This line is centered.
+	\end{center}
+
+	\begin{flushright}
+		This line is flushright.
+	\end{flushright}
+	
+	\section{Packages, Macros, and Graphics}
+	
+	\leavevmode
+	
+	Using geometry package to control margin and paper.\\
+	
+	Using amsfonts, amsmath, amssymb to write special math notation.\\
+	
+	Using graphicx to insert picture from your device.\\
+	
+	Using float to align, and control the insert position of table or picture.\\
+	
+	\section{Calculus Notation}
+	
+	\leavevmode
+	
+	The function $f(x) = (x-3)^2+\frac{1}{2}$ has domain $\text{D}_f:(-\infty, \infty)$ and range $\text{R}_f:\left[\frac{1}{2}, \infty\right)$\\
+	
+	$\lim\limits_{x \to 0} f(x)$\\
+	
+	$\displaystyle{\lim \limits_{x \to a} \frac{f(x) - f(a)}{x- a} = f'(a)}$\\
+	
+	$\displaystyle{\int} \sin x \, \text{d}x = -\cos x + C$\\
+	
+	$\displaystyle{\int_a^b}$\\
+	
+	$\displaystyle{\int \limits_a^b}$\\
+	
+	$\displaystyle{\int \limits_{2a}^b} x^2 \, \text{d}x = \left[\frac{x^3}{3}\right]_a^b$\\
+	
+	$\displaystyle{\sum \limits_{n=1}^{\infty}}$\\
+	
+	$\displaystyle{\int_a^b f(x) \, \text{d}x = \lim \limits_{x \to \infty} \sum \limits_{k=1}^{n} f(x_k). \Delta x}$\\
+	
+	$\vec{v} = v_1 \vec{i} + v_2 \vec{j} = (v_1, v_2)$
+	
+\end{document}

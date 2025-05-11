@@ -1,0 +1,102 @@
+Description: Multiple Arguments
+Trigger: #ma
+
+% Code
+\DeclareMathOperator{\rank}{rank}
+\makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+Description: tab in math text
+Trigger: #tab
+
+% Code
+$\,\,\,$
+
+Description: Multiple picture in a row
+Trigger: #mpr
+
+% Code
+% This code insert 3 picture in a row, we can insert more than if we want. Notice that the \textwidth of each picture should be shared efficiently and all combined less than 1.
+\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.3 \textwidth}
+			\includegraphics[width=1\linewidth]{file_name}
+			\caption{A corner}
+		\end{subfigure}
+		\begin{subfigure}{0.3 \textwidth}
+			\includegraphics[width=1\linewidth]{file_name}
+			\caption{A Discontinuity}
+		\end{subfigure}
+		\begin{subfigure}{0.3 \textwidth}
+			\includegraphics[width=1\linewidth]{file_name}
+			\caption{A vertical tangent}
+		\end{subfigure}
+\end{figure}
+
+Description: minipage
+Trigger: #mnp
+
+% Code
+	\begin{minipage}{0.65\linewidth}
+		\includegraphics[height=8\baselineskip]{grafics}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.35\linewidth}
+		some text
+	\end{minipage}
+
+Description: Set counter Enumerate
+Trigger: #enumi
+
+% Code
+
+% Change number start
+\setcounter{enumi}{4}
+
+% Change number count to alpha count
+\begin{enumerate}[label = (\alph*)]
+
+Description: Add figure
+Trigger: #figure
+
+% Code
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{figure_}
+	\caption{}
+\end{figure}
+
+Description: QED in end of proof
+Trigger: #qed
+
+% Code
+%You have to \usepackage{amsth} package in the preemble to use \begin{proof}
+
+\renewcommand\qedsymbol{QED}
+
+\begin{proof}
+
+\end{proof}
+
+Description: Domain R
+Trigger: #r
+
+% Code
+{\Bbb R}
+
+Description: Differentiation
+Trigger: #dif
+
+% Code
+\frac{\text{d}}{\text{d}x}
