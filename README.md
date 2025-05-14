@@ -7,3 +7,5 @@ The source learning by Michelle Krummel is [here](https://www.youtube.com/watch?
 The macros's note is [here](https://github.com/NghiemXuanHaiAnhNXHA/Latex-Note/blob/main/Macros.txt).
 
 The preamble's note is [here](https://github.com/NghiemXuanHaiAnhNXHA/Latex-Note/blob/main/Preamble.tex).
+
+The Assignment_Template is [here](https://github.com/NghiemXuanHaiAnhNXHA/Latex-Note/blob/main/Assignment_Template.tex).
